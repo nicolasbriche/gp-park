@@ -10,11 +10,29 @@
 @media screen {
     .schedule--row-table {
         gap: 50px;
-        width: 800px;
+        width: 200px;
         margin: auto;
         display: flex;
         overflow: hidden;
         flex-flow: row nowrap;
+    }
+
+    @media screen and (min-width: 400px) {
+        .schedule--row-table {
+            width: 300px;
+        }
+    }
+
+    @media screen and (min-width: 700px) {
+        .schedule--row-table {
+            width: 500px;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        .schedule--row-table {
+            width: 800px;
+        }
     }
 }
 

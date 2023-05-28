@@ -103,12 +103,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Gestion du switch été hiver
     var switchSchedule = document.getElementsByClassName("schedule--switch")[0];
     var scheduleTable = document.getElementsByClassName("schedule--table");
+    var widthScheduleTable = document.getElementById("schedule--table").offsetWidth + 50;
     switchSchedule.onclick = function () {
         if (switchSchedule.classList.contains("winter")) {
             switchSchedule.classList.remove("winter");
             switchSchedule.classList.add("summer");
-            scheduleTable[0].style.transform = "translateX(-850px)";
-            scheduleTable[1].style.transform = "translateX(-850px)";
+            scheduleTable[0].style.transform = "translateX(-" + widthScheduleTable + "px)";
+            scheduleTable[1].style.transform = "translateX(-" + widthScheduleTable + "px)";
 
         } else if (switchSchedule.classList.contains("summer")) {
             switchSchedule.classList.add("winter");
